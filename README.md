@@ -1,37 +1,29 @@
-# Cal to Butt: Chrome Extension Hackpack @ Treehacks 2019
+# Fishing is Fun: Chrome Extension
+A fishing buddy for your study!
 
 ## Overview
 
-Congratulations! You've chosen this hackpack, and you're well on your way to building a super cool product!
+"Fishing Study Buddy" is a site blocker chrome extension that helps you stay on task with a fishing mini game (in the background), reminders to take breaks (can set timer for breaks), task/goal list (per goal eg.[spend 2 hours on google docs for an essay] and notification/pop-up.
+Level up or the better you do the more incentives/rewards you get for your character.
+Assist you while you’re on the computer but also reminds you take screen breaks which has been a struggle in the past year.
 
-In this hackpack, you will build a chrome extension that replaces the content on webpages according to customizable rules. Your main task is to replace all instances of the text "cal" with the text "butt" on all webpages.
 
-It utilizes some Javascript and HTML to edit website displays, and can be easily changed and altered to suit other purposes.
+## How is this different from other study apps?
+Unlike other apps where they enforce a strict screen limit or use gimmicky techniques such as "growing a forest" that reset every study session, "Fishing Study Buddy"
+encourages self-discipline through a cute study buddy. It turns studying into a fun game without any distracting separate windows. Think: Clippy but 100x better.
 
-## Getting Started
+Other study apps require using a whole other window or opening an app to use which is where the “forest” etc. are
+Ours is more integrated into the work environment without being distracting so you can see your productivity as you go without having to go to a new tab
+More minimal movement/small icons for less distraction, but creates a satisfying “Zen” environment
+Ours also implements breaks/healthy study habits
+You can visually SEE a “stop time” ie. catching the fish which makes it feel like “I’ll just push myself for a bit more” and thus encourages people to try harder than a vague end goal/having no end goal of “growing plants more”
+Our reward system of “Growth” encourages more self discipline whereas other “Screen-time limiters” or “website blockers” use harsh punitive limits that don’t teach self discipline 
+Gamifying studying w/ rewards/growth makes studying fun/more productive
+
+
 
 ### Download and unzip starter code
-Download and unzip the [starter code] (https://github.com/TreeHacks/hackpack-chrome-ext)
 
-Alternatively, if you are a Git master, you can sync with [our Git repository](https://github.com/TreeHacks/hackpack-chrome-ext)  over HTTPS or SSH. Note: If you aren't familiar with Git, or don't know what the following lines would do, don't execute the following commands!
-
-```
-# From Terminal.app or equivalent...
-
-# Clone via HTTPS
-$ git clone (https://github.com/TreeHacks/hackpack-chromeExt)
-# or SSH
-$ git clone git@github.com:TreeHacks/hackpack-chromeExt.git
-```
-
-### Download Google Chrome
-Download Google Chrome if you haven't already! You can download the latest version [here](https://www.google.com/chrome/browser/desktop/). For this hackpack, you'll need Chrome Version 40 or newer. In order to figure out which version you have, go to [chrome://version/](chrome://version/) in the Omnibar, and look at the top line. You should see something like
-
-```
-Google Chrome	48.0.2564.109 (Official Build) (64-bit)
-```
-
-Don't worry if it's not exactly the same. As long as the major number (before the decimal point) is greater than 40, you're set!
 
 ### Load Starter Code
 Chrome usually ships extensions as `.crx` files (similar to `.zip` files), which is great for distribution, but not so great for developing. Instead, we'll tell Chrome to treat the starter code folder as an extension.
