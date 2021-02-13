@@ -6,6 +6,7 @@ which is the window that pops up when you click the icon
 in the upper right corner of the Chrome window. Update this
 HTML file to change the layout of the content if you'd like!
 Currently, it is the TreeHacks banner.
+
 The file doesn't need to be updated for the hackpack, but
 making it look stylish can be a cool extension.
 -->
@@ -16,10 +17,10 @@ making it look stylish can be a cool extension.
 <style>
 body {
   font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-  font-size: 100%;
-  /* position: relative;
-  vertical-align: middle; */
-  /* background-image: url(/icons/TreeHacksCoverPhoto.png); */
+        font-size: 100%;
+  position: relative;
+  vertical-align:middle;
+  background-image: url(/images/cat/orange_cat_0000.png);
   background-size: 100% 100%;
   min-width: 310px;
   min-height: 430px;
@@ -29,35 +30,20 @@ h1 {
   text-align: left;
   background-color: grey;
 }
-html {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-button,
-input,
-select,
-textarea {
-    color: #222;
-    -webkit-tap-highlight-color: rgba(201, 224, 253, 0.8);
-}
-h1 {
-  text-align: left;
-  background-color: grey;
-}
-
 </style >
 
 <body>
     <h1>
       Fishing is Fun
     </h1>
-    <i tabindex="10" id="options">Settings</i>
+    <button tabindex="10" id="options">Settings</button>
+    <button tabindex="10" id="fishing">Go fish!</button>
     <p>
       Block sites and focus on your tasks!
     </p>
     <p>Sit back, relax, and fish on!</p>
 
+<script src="popup.js" ></script>
 
-  <script src="popup.js" ></script>
 </body>
 </html>
