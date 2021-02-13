@@ -3,9 +3,6 @@
  * A manifest file (like this one) is used to
  * give Chrome information about your extension.
  *
- * You shouldn't need to change anything in this file
- * unless you're doing extensions.
- *
  * For more details, check out the documentation:
  * https://developer.chrome.com/extensions/manifest
  */
@@ -15,8 +12,7 @@
   "manifest_version": 2,
   "name": "FishingIsFun",
   "version": "0.0.1",
-
-  "options_page": "options.html",
+  "options_page": "src/options.html",
   "description": "Productivity Chrome extension that blocks sites, set tasks, and makes fishing fun!",
   "icons": {
     "16": "icons/TreeHacks-white-16.png",
@@ -26,24 +22,16 @@
     "96": "icons/TreeHacks-white-96.png",
     "128": "icons/TreeHacks-white-128.png"
   },
-
-  // Put any additional permissions your applications needs here.
-  // For a list of possibilities, see
-  // https://developer.chrome.com/extensions/declare_permissions
-  "permissions": [
-    "storage", "tabs" // Allows access to chrome.storage API
-],
+  "permissions": [ "storage", "tabs" ],
   "background": {
-    "scripts": [
-      "background.js"
-    ],
+    "scripts": ["src/background.js"],
     "persistent": false
-  }
+  },
   "browser_action": {
     "default_icon": "icons/TreeHacks-white-19.png",
-    "default_title": "Cal to Butt",
-    "default_popup": "src/popup.html"
-  },
+    "default_title": "FishingIsFun"
+    // "default_popup": "src/popup.html"
+  }
   // "content_scripts": [
   //   {
   //     "matches": [
