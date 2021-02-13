@@ -6,5 +6,5 @@ options.addEventListener("click", () => {
 });
 
 fishing.addEventListener("click", () => {
-    window.open("fishing.html", "_blank");
+    location.href = "fishing.html";
 });
