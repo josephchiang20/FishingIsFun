@@ -16,34 +16,36 @@
   "name": "FishingIsFun",
   "version": "0.0.1",
 
-  "options_page": "options.html",
+  "options_page": "src/options.html",
   "description": "Productivity Chrome extension that blocks sites, set tasks, and makes fishing fun!",
   "icons": {
-    "16": "icons/TreeHacks-white-16.png",
-    "32": "icons/TreeHacks-white-32.png",
-    "48": "icons/TreeHacks-white-48.png",
-    "64": "icons/TreeHacks-white-64.png",
-    "96": "icons/TreeHacks-white-96.png",
-    "128": "icons/TreeHacks-white-128.png"
+    "16": "icons/anchor-16.png",
+    "32": "icons/anchor-32.png",
+    "48": "icons/anchor-48.png",
+    "64": "icons/anchor-64.png",
+    "96": "icons/anchor-96.png",
+    "128": "icons/anchor-128.png"
   },
 
   // Put any additional permissions your applications needs here.
   // For a list of possibilities, see
   // https://developer.chrome.com/extensions/declare_permissions
   "permissions": [
-    "storage", "tabs" // Allows access to chrome.storage API
-],
+    "storage", "tabs" // Allows access to chrome.storage API 
+  ],
+
   "background": {
     "scripts": [
-      "background.js"
+      "src/background.js"
     ],
     "persistent": false
-  }
+  },
+
   "browser_action": {
-    "default_icon": "icons/TreeHacks-white-19.png",
+    "default_icon": "icons/fish-19.png",
     "default_title": "Fishing is Fun",
     "default_popup": "src/popup.html"
-  },
+  }
   // "content_scripts": [
   //   {
   //     "matches": [
