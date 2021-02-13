@@ -31,10 +31,24 @@
   },
 
   "browser_action": {
-    "default_icon": "icons/fish-19.png",
+    "default_icon": "icons/anchor-19.png",
     "default_title": "Fishing is Fun",
     "default_popup": "src/popup.html"
-  }
+  },
+
+  "content_scripts": [{
+    "css": ["pet/fish.css"],
+    "js": ["pet/fish.js"],
+    "html" : ["pet/fish.html"],
+    "matches": ["https://*/*"]
+  }],
+
+  "web_accessible_resources": [
+    "images/*.png",
+    "pet/*.jpg",
+    "pet/*.png",
+    "pet/*.html"
+  ]
   // "content_scripts": [
   //   {
   //     "matches": [
