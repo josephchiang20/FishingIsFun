@@ -36,18 +36,15 @@
     "default_popup": "src/popup.html"
   },
 
-  "content_scripts": [{
-    "css": ["pet/fish.css"],
-    "js": ["pet/fish.js"],
-    "html" : ["pet/fish.html"],
-    "matches": ["https://*/*"]
-  }],
+//  "content_scripts": [{
+//    "css": ["pet/fish.css"],
+//    "js": ["pet/fish.js"],
+//    "html" : ["pet/fish.html"],
+//    "matches": ["https://*/*"]
+//  }],
 
   "web_accessible_resources": [
-    "images/*.png",
-    "pet/*.jpg",
-    "pet/*.png",
-    "pet/*.html"
+    "images/*.png"
   ]
   // "content_scripts": [
   //   {

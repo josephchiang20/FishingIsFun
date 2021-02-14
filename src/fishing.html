@@ -1,16 +1,63 @@
 <!DOCTYPE html>
 <html><head>
-    <title>Embedded Hello World</title>
-</head><body>
-<h1> Your pet believes in you! </h1>
-<p>Hello World!</p>
+    <title>Study Hall</title>
 
-<div class = cat > </div>
-
-</body></html>
+</head>
 
 <style>
-.cat {
-    
-}
+  body {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 100%;
+    /* position: relative;
+    vertical-align: middle;
+    background-image: url(/images/cat/orange_cat_0000.png); */
+    background-size: 100% 100%;
+    min-width: 310px;
+    min-height: 430px;
+    overflow: hidden;
+  }
+
+  h1 {
+    text-align: center;
+    background-color: #b8e5fc;
+  }
+  img {
+    min-width: 300px;
+    min-height: 200px;
+  }
+
+  .motivating {
+    background-image: URL('/images/SpeechBubb.png');
+    background-repeat: no-repeat;
+    min-width: 300px;
+    min-height: 100px;
+
+  }
+
+  .motivateText {
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+
+    font-size: 20px;
+    color: #8f4d18;
+    font-weight: bold;
+  }
 </style>
+<body>
+  <h1> Fisher believes in you! </h1>
+
+<div class = "motivating">
+  <div id = "motivate" class = "motivateText">
+  Click on me-ow!
+  </div>
+</div>
+
+  <a id="cats">
+    <img src='/images/catTotSmall.gif' />
+  </a>
+  <script src="popup.js"></script>
+</body>
+</html>
+

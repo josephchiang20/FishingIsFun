@@ -20,7 +20,7 @@ body {
         font-size: 100%;
   position: relative;
   vertical-align:middle;
-  background-image: url(/images/cat/orange_cat_0000.png);
+  background-image: url(/images/CatBoatSmall.gif);
   background-size: 100% 100%;
   min-width: 310px;
   min-height: 430px;
@@ -28,39 +28,35 @@ body {
 }
 h1 {
   text-align: center;
-  background-color: grey;
+  background-color: #b8e5fc;
 }
-<<<<<<< HEAD
-#options{
-  background-color: blue; 
-  color: azure;
-html {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+.clickable {
+  background-color: #f44336;
+  padding: 10px 30px;
+  color: white;
+  font-size: 20px;
 }
-
-button,
-input,
-select,
-textarea {
-    color: #222;
-    -webkit-tap-highlight-color: rgba(201, 224, 253, 0.8);
+p {
+  font-size: 20px;
+  padding-left: 20px;
+  color: #15216e;
 }
-=======
->>>>>>> 34d6b87dedc89b35f49fe35d33f6463434407f3d
 </style >
 
 <body>
     <h1>
       Fishing is Fun
     </h1>
-    <button tabindex="10" id="options">Settings</button>
-    <button tabindex="10" id="fishing">Go fish!</button>
+    <div style="text-align:center;">
+    <button tabindex="10" id="options" class = "clickable">Settings</button>
+    <button tabindex="10" id="fishing" class = "clickable">Go fish!</button>
+  </div>
     <p>
       Block sites and focus on your tasks!
     </p>
     <p>Sit back, relax, and fish on!</p>
 
 <script src="popup.js" ></script>
-
+<script src = "fishing.js"></script>
 </body>
 </html>
