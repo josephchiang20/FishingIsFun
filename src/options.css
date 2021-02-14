@@ -1,3 +1,11 @@
+/*calming background*/
+body {
+  background-image: URL('/images/CatBoatLong.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position : left bottom;
+}
+
 /* Include the padding and border in an element's total width and height */
 * {
   box-sizing: border-box;
@@ -116,3 +124,4 @@ input {
 .addBtn:hover {
   background-color: #bbb;
 }
+
