@@ -9,6 +9,18 @@ let motivational = ["You're fishing good.", "You're ameozing!", "You're reeling 
 "You're doing ameowzing!", "I'm proud of you, meow.", "Even though I'm stuck in here, I still believe in you.", "We're in this boat together.",
 "We'll get to the end of this ocean!", "The Cs are harsh today, arr!"];
 
+function checkIfFished() {
+    var setHr = document.getElementById("tpick-h");
+    var setMin = document.getElementById("tpick-m");
+    var setSec = document.getElementById("tpick-s");
+
+    if(setHr == ac.padzero(now.getHours()) &&
+    setMin == ac.padzero(now.getMinutes()) &&
+    setSec == ac.padzero(now.getSeconds()) ) {
+        location.href = "fishing.html";
+    }
+}
+
 if (options != null) {
     options.addEventListener("click", () => {
         window.open("options.html", "_blank");
