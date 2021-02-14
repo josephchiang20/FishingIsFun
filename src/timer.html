@@ -108,34 +108,19 @@
   </div>
   <div class="section">
     <!-- CURRENT TIME -->
-    <div id="ctime">
-      <h1 class="header">Current Time</h1>
-      <div class="square">
-        <div class="digits" id="chr">00</div>
-        <div class="text">HR</div>
-      </div>
-      <div class="square">
-        <div class="digits" id="cmin">00</div>
-        <div class="text">MIN</div>
-      </div>
-      <div class="square">
-        <div class="digits" id="csec">00</div>
-        <div class="text">SEC</div>
-      </div>
+    <div id="demo">
+
     </div>
-    <!-- SET ALARM -->
-    <div id="tpick">
-      <h1 class="header">
-        Set Reminder
-      </h1>
-      <div id="tpick-h"></div>
-      <div id="tpick-m"></div>
-      <div id="tpick-s"></div>
-      <div>
-        <input type="button" value="Set" id="tset" />
-        <input type="button" value="Reset" id="treset" disabled />
-      </div>
-    </div>
+    <p>Hour <input class="input" id="hour"></input></p>
+    <p>Minute <input class="input" id="minute"></input></p>
+    <p>Second <input class="input" id="second"></input></p>
+    <button id="SetTimer" type="submit">Set Timer</button>
+    <button id="ResetTimer" type="submit">Reset</button>
+    <p id="days"></p>
+    <p id="hours"></p>
+    <p id="mins"></p>
+    <p id="secs"></p>
+    <h2 id="end"></h2>
   </div>
   <script src="popup.js"></script>
 </body>

@@ -3,6 +3,8 @@ const fishing = document.getElementById("fishing");
 const timer = document.getElementById("timer");
 const cats = document.getElementById("cats");
 const back = document.getElementById("back");
+const SetTimer = document.getElementById("SetTimer");
+const ResetTimer = document.getElementById("ResetTimer");
 
 let motivational = ["You're fishing good.", "You're ameozing!", "You're reeling well!", "Meow! Moew!", "This window is fishy...", 
 "I wonder what the world is like beyond this window.", "Study with meow!", "We'll catch those fish!", "Study on!", "Fish on!",
@@ -35,89 +37,67 @@ if(back != null) {
         location.href = "popup.html";
     });
 }
-//SET A REMINDER
-var ac = {
-    // (A) INITIALIZE ALARM CLOCK
-    init: function () {
-        // (A1) GET THE CURRENT TIME - HOUR, MIN, SECONDS
-        ac.chr = document.getElementById("chr");
-        ac.cmin = document.getElementById("cmin");
-        ac.csec = document.getElementById("csec");
 
-        // (A2) CREATE TIME PICKER - HR, MIN, SEC
-        ac.thr = ac.createSel(23);
-        document.getElementById("tpick-h").appendChild(ac.thr);
-        ac.thm = ac.createSel(59);
-        document.getElementById("tpick-m").appendChild(ac.thm);
-        ac.ths = ac.createSel(59);
-        document.getElementById("tpick-s").appendChild(ac.ths);
+// TIMER
+let createClock;
 
-        // (A3) CREATE TIME PICKER - SET, RESET
-        ac.tset = document.getElementById("tset");
-        ac.tset.addEventListener("click", ac.set);
-        ac.treset = document.getElementById("treset");
-        ac.treset.addEventListener("click", ac.reset);
+if (ResetTimer != null) {
+    ResetTimer.addEventListener("click", () => {
+        const hr = document.getElementById("hour").value = "";
+        const min = document.getElementById("minute").value = "";
+        const s = document.getElementById("second").value = "";
+        clearInterval(createClock);
+        document.getElementById("hours").innerHTML = "";
+        document.getElementById("mins").innerHTML = "";
+        document.getElementById("secs").innerHTML = "";
+    });
+}
 
-        // (A5) START THE CLOCK
-        ac.alarm = null;
-        setInterval(ac.tick, 1000);
-    },
+let alreadySet = false;
 
-    // (B) SUPPORT FUNCTION - CREATE SELECTOR FOR HR, MIN, SEC
-    createSel: function (max) {
-        var selector = document.createElement("select");
-        for (var i = 0; i <= max; i++) {
-            var opt = document.createElement("option");
-            i = ac.padzero(i);
-            opt.value = i;
-            opt.innerHTML = i;
-            selector.appendChild(opt);
-        }
-        return selector
-    },
+if (SetTimer != null) {
+    SetTimer.addEventListener("click", () => {
+        alreadySet = true;
+        const hr = document.getElementById("hour").value;
+        const min = document.getElementById("minute").value;
+        const s = document.getElementById("second").value;
+        convertMs(hr,min,s);
+    });
+}
 
-    // (C) SUPPORT FUNCTION - PREPEND HR, MIN, SEC WITH 0 (IF < 10)
-    padzero: function (num) {
-        if (num < 10) { num = "0" + num; }
-        else { num = num.toString(); }
-        return num;
-    },
+function convertMs(hr,min,s) {
+    let ms_1 = s * 1000;
+    let ms_2 = 60 * 1000 * min;
+    let ms_3 = 60 * 60 * 1000 * hr;
+    run(ms_1 + ms_2 + ms_3);
+}
 
-    // (D) UPDATE CURRENT TIME
-    tick: function () {
-        // (D1) CURRENT TIME
-        var now = new Date();
-        var hr = ac.padzero(now.getHours());
-        var min = ac.padzero(now.getMinutes());
-        var sec = ac.padzero(now.getSeconds());
+function run(ms) {
+    if(alreadySet) {
+        alreadySet = false;
+        let timeAtSetClock;
+        createClock = setInterval(() => {
+            console.log(ms);
+            let now = new Date().getTime();
+            if (!alreadySet) {
+                timeAtSetClock = now;
+                alreadySet = true;
+            }
+            let timeleft = (timeAtSetClock + ms) - now;
+            let hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+            document.getElementById("hours").innerHTML = hours + "h "
+            document.getElementById("mins").innerHTML = minutes + "m "
+            document.getElementById("secs").innerHTML = seconds + "s"
 
-        // (D2) UPDATE HTML CLOCK
-        ac.chr.innerHTML = hr;
-        ac.cmin.innerHTML = min;
-        ac.csec.innerHTML = sec;
-    },
-
-    // (E) SET ALARM
-    set: function () {
-        ac.alarm = ac.thr.value + ac.thm.value + ac.ths.value;
-        ac.thr.disabled = true;
-        ac.thm.disabled = true;
-        ac.ths.disabled = true;
-        ac.tset.disabled = true;
-        ac.treset.disabled = false;
-    },
-
-    // (F) RESET ALARM
-    reset: function () {
-        if (!ac.sound.paused) { ac.sound.pause(); }
-        ac.alarm = null;
-        ac.thr.disabled = false;
-        ac.thm.disabled = false;
-        ac.ths.disabled = false;
-        ac.tset.disabled = false;
-        ac.treset.disabled = true;
+            if (timeleft < 0) {
+                clearInterval(createClock);
+                document.getElementById("hours").innerHTML = ""
+                document.getElementById("mins").innerHTML = ""
+                document.getElementById("secs").innerHTML = ""
+                document.getElementById("end").innerHTML = "TIME UP!!";
+            }
+        }, 1000, ms)
     }
-};
-
-// (G) START CLOCK ON PAGE LOAD
-window.addEventListener("load", ac.init);
+}
