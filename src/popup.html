@@ -27,8 +27,19 @@ body {
   overflow: hidden;
 }
 h1 {
-  text-align: left;
-  background-color: grey;
+  text-align: center;
+  background-color: #b8e5fc;
+}
+.clickable {
+  background-color: #f44336;
+  padding: 10px 30px;
+  color: white;
+  font-size: 20px;
+}
+p {
+  font-size: 20px;
+  padding-left: 20px;
+  color: #15216e;
 }
 </style >
 
@@ -36,8 +47,10 @@ h1 {
     <h1>
       Fishing is Fun
     </h1>
-    <button tabindex="10" id="options">Settings</button>
-    <button tabindex="10" id="fishing">Go fish!</button>
+    <div style="text-align:center;">
+    <button tabindex="10" id="options" class = "clickable">Settings</button>
+    <button tabindex="10" id="fishing" class = "clickable">Go fish!</button>
+  </div>
     <p>
       Block sites and focus on your tasks!
     </p>
