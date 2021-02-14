@@ -2,18 +2,37 @@
 <html>
 
 <head>
-  <title>Block Site</title>
+  <title>FishingIsFun</title>
+  <link rel="stylesheet" href="options.css">
 </head>
 <body>
 
-  <h1>Block Site</h1>
-
-  <textarea id="textarea" rows="10" cols="30" spellcheck="false"></textarea>
-  <br>
-
-  <button id="save">Save</button>
-  <strong>Enabled?</strong><input id="checkbox" type="checkbox">
-
+  <h1>Settings</h1>
+  <div>
+      <h2>Block Sites</h2>
+      <textarea id="textarea" rows="10" cols="30" spellcheck="false"></textarea>
+      <br>
+      <button id="save">Save</button>
+      <strong>Enabled?</strong><input id="checkbox" type="checkbox">
+  </div>
+  <div>
+    <h2>Set a Reminder</h2>
+    <form>
+      <label for="fname">In x minutes:</label><br>
+      <input type="text" id="mins" name="mins" value="ex. 45"><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <div>
+    <div id="myDIV" class="header">
+      <h2>My To Do List</h2>
+      <input type="text" id="myInput" placeholder="Title...">
+      <span id="newElement" class="addBtn">Add</span>
+    </div>
+    <ul id="myUL">
+      <li>Example task</li>
+    </ul>
+  </div>
   <script src="options.js"></script>
 </body>
 
