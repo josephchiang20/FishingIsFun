@@ -8,3 +8,7 @@ options.addEventListener("click", () => {
 fishing.addEventListener("click", () => {
     location.href = "fishing.html";
 });
+
+function changeImage() {
+    alert("hi");
+ }

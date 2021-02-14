@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html><head>
     <title>Study Hall</title>
+
 </head>
+
 <style>
   body {
     font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
@@ -23,17 +25,20 @@
     min-width: 300px;
     min-height: 200px;
   }
-  .cat {
-    background-image: url('/images/grassSmall.png');
-  }
 </style>
 <body>
   <h1> Fisher believes in you! </h1>
   <p> You can do it!</p>
 
-  <div class = "cat">
-  <img src = '/images/catTotSmall.gif'>
-  </div>
-
+  <a onclick= "changeImage()">
+  <img src = '/images/catTotSmall.gif' id = 'cat_image'>
+  </a>
+  
+  <script>
+      function changeImage() {
+    alert("hi");
+ }
+  </script>
 </body>
 </html>
+
