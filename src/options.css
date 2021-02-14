@@ -22,6 +22,7 @@ h1 {
 
 div.section {
     display: inline-block;
+    margin-left: 50px;
 }
 /* MY TO DO LIST */
 /* Remove margins and padding from the list */
