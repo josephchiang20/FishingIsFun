@@ -1,14 +1,4 @@
-/* File: manifest.json
- * -------------------
- * A manifest file (like this one) is used to
- * give Chrome information about your extension.
- *
- * For more details, check out the documentation:
- * https://developer.chrome.com/extensions/manifest
- */
-
 {
-  // Required
   "manifest_version": 2,
   "name": "FishingIsFun",
   "version": "0.0.1",
