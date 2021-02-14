@@ -5,6 +5,7 @@ body {
   background-attachment: fixed;
   background-position : left bottom;
   font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -15,14 +16,23 @@ h1 {
   background-color: #b8e5fc;
 }
 
+h2 {
+  text-align: center;
+}
+
 /* Include the padding and border in an element's total width and height */
 * {
   box-sizing: border-box;
 }
 
+div.row {
+  text-align: center;
+}
+
 div.section {
-    display: inline-block;
-    margin-left: 50px;
+    margin: 0 auto;
+    min-width:500px;
+    margin-top: 30px;
 }
 /* MY TO DO LIST */
 /* Remove margins and padding from the list */
@@ -59,7 +69,7 @@ ul li:hover {
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
-  background: rgb(12, 231, 67);
+  background:grey;
   color: #fff;
   text-decoration: line-through;
 }
@@ -87,13 +97,13 @@ ul li.checked::before {
 }
 
 .close:hover {
-  background-color: #f44336;
+  background-color: #b8e5fc;
   color: white;
 }
 
 /* Style the header */
 .header {
-  background-color: #f44336;
+  background-color: #b8e5fc;
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -107,7 +117,7 @@ ul li.checked::before {
 }
 
 /* Style the input */
-input {
+#myDIV input {
   margin: 0;
   border: none;
   border-radius: 0;
@@ -133,69 +143,4 @@ input {
 
 .addBtn:hover {
   background-color: #bbb;
-}
-
-/* SET A REMINDER */
-.header {
-  text-align: center;
-  font-weight: normal;
-  margin: 5px 0 10px 0;
-}
-
-/* (B) CURRENT TIME */
-#ctime {
-  margin: 0 auto;
-  max-width: 350px;
-  padding: 10px;
-  background: #000;
-  text-align: center;
-}
-#ctime .square {
-  display: inline-block;
-  padding: 10px;
-  margin: 5px;
-}
-#ctime .digits {
-  font-size: 24px;
-  background: #fff;
-  color: #000;
-  padding: 20px 10px;
-  border-radius: 5px;
-}
-#ctime .text {
-  margin-top: 10px;
-  color: #ddd;
-}
-
-/* (C) TIME PICKER */
-#tpick {
-  margin: 0 auto;
-  max-width: 350px;
-  padding: 10px;
-  background: #f2f2f2;
-  white-space: nowrap;
-}
-#tpick-h, #tpick-m, #tpick-s {
-  display: inline-block;
-  width: 32%;
-}
-#tpick select {
-  box-sizing: padding-box;
-  width: 100%;
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 20px 0;
-}
-#tset, #treset {
-  box-sizing: padding-box;
-  width: 50%;
-  background: red;
-  color: #fff;
-  padding: 10px;
-  border: 0;
-  cursor: pointer;
-}
-#tset:disabled, #treset:disabled {
-  background: #aaa;
-  color: #fff;
 }
