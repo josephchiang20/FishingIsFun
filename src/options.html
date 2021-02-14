@@ -75,44 +75,6 @@
       <strong>Enabled?</strong><input id="checkbox" type="checkbox">
   </div>
   <div class="section">
-    <h2>Set a Reminder</h2>
-    <!-- CURRENT TIME -->
-    <div id="ctime">
-      <h1 class="header">Current Time</h1>
-      <div class="square">
-        <div class="digits" id="chr">00</div>
-        <div class="text">HR</div>
-      </div>
-      <div class="square">
-        <div class="digits" id="cmin">00</div>
-        <div class="text">MIN</div>
-      </div>
-      <div class="square">
-        <div class="digits" id="csec">00</div>
-        <div class="text">SEC</div>
-      </div>
-    </div>
-    
-    <!-- SET ALARM -->
-    <div id="tpick">
-      <h1 class="header">
-        Set Alarm
-      </h1>
-      <div id="tpick-h"></div>
-      <div id="tpick-m"></div>
-      <div id="tpick-s"></div>
-      <div>
-        <button type="button" value="Set" id="tset">Set</button>
-        <button type="button" value="Reset" id="treset" disabled>Reset</button>
-      </div>
-    </div>
-    
-    <!-- (C) ALARM SOUND -->
-    <audio id="alarm-sound" loop>
-      <source src="wake-up-sound.mp3" type="audio/mp3">
-    </audio>
-  </div>
-  <div class="section">
     <div id="myDIV" class="header">
       <h2>My To Do List</h2>
       <input type="text" id="myInput" placeholder="Title...">
@@ -122,11 +84,6 @@
       <li>Example task</li>
     </ul>
   </div>
-
-  <script src="options.js"></script>
-  <script>
-    jsalarm.init()
-  </script>
 </body>
 
 </html>

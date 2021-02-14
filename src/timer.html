@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Timer</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
+
+<style>
+  body {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 100%;
+    /* position: relative;
+    vertical-align: middle;
+    background-image: url(/images/cat/orange_cat_0000.png); */
+    background-size: 100% 100%;
+    min-width: 310px;
+    min-height: 430px;
+    overflow: hidden;
+  }
+
+  h1 {
+    text-align: center;
+    background-color: #b8e5fc;
+    min-width: 260px;
+    min-height: 50px;
+  }
+
+  .clickable {
+    background-color: #f44336;
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+  }
+
+  /* SET A REMINDER */
+.header {
+  text-align: center;
+  font-weight: normal;
+  margin: 5px 0 10px 0;
+}
+
+/* (B) CURRENT TIME */
+#ctime {
+  margin: 0 auto;
+  max-width: 350px;
+  padding: 10px;
+  background: #000;
+  text-align: center;
+}
+#ctime .square {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+}
+#ctime .digits {
+  font-size: 24px;
+  background: #fff;
+  color: #000;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+#ctime .text {
+  margin-top: 10px;
+  color: #ddd;
+}
+
+/* (C) TIME PICKER */
+#tpick {
+  margin: 0 auto;
+  max-width: 350px;
+  padding: 10px;
+  background: #f2f2f2;
+  white-space: nowrap;
+}
+#tpick-h, #tpick-m, #tpick-s {
+  display: inline-block;
+  width: 32%;
+}
+#tpick select {
+  box-sizing: padding-box;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+#tset, #treset {
+  box-sizing: padding-box;
+  width: 50%;
+  background: red;
+  color: #fff;
+  padding: 10px;
+  border: 0;
+  cursor: pointer;
+}
+#tset:disabled, #treset:disabled {
+  background: #aaa;
+  color: #fff;
+}
+</style>
+
+<body>
+  <div align="center">
+    <div style="display: inline-block;">
+      <button id="back" class="clickable"> <i class="fas fa-angle-double-left"></i> </button>
+    </div>
+    <h1 style="display: inline-block;"> Timer </h1>
+  </div>
+  <div class="section">
+    <!-- CURRENT TIME -->
+    <div id="ctime">
+      <h1 class="header">Current Time</h1>
+      <div class="square">
+        <div class="digits" id="chr">00</div>
+        <div class="text">HR</div>
+      </div>
+      <div class="square">
+        <div class="digits" id="cmin">00</div>
+        <div class="text">MIN</div>
+      </div>
+      <div class="square">
+        <div class="digits" id="csec">00</div>
+        <div class="text">SEC</div>
+      </div>
+    </div>
+    <!-- SET ALARM -->
+    <div id="tpick">
+      <h1 class="header">
+        Set Reminder
+      </h1>
+      <div id="tpick-h"></div>
+      <div id="tpick-m"></div>
+      <div id="tpick-s"></div>
+      <div>
+        <input type="button" value="Set" id="tset" />
+        <input type="button" value="Reset" id="treset" disabled />
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
