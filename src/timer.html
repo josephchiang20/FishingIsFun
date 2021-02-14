@@ -107,6 +107,13 @@
   }
   .fish_texty {
     font-size : 20px;
+    text-align : center;
+  }
+  .countdown {
+    background-color : #b8e5fc;
+    text-align: center;
+    /*border: solid #b8e5fc; 3px;*/
+    min-height: 30px;
   }
 </style>
 
@@ -115,7 +122,7 @@
     <div style="display: inline-block;">
       <button id="back" class="clickable"> <i class="fas fa-angle-double-left"></i> </button>
     </div>
-    <h1 style="display: inline-block;"> Timer </h1>
+    <h1 style="display: inline-block;" id = "title"> Timer </h1>
   </div>
 
   <div id = "timer_all">
@@ -131,9 +138,13 @@
     <button id="SetTimer" type="submit" class = "clickable">Set Timer</button>
     <button id="ResetTimer" type="submit" class = "clickable">Reset</button>
     <p id="days"></p>
-    <p id="hours"></p>
-    <p id="mins"></p>
-    <p id="secs"></p>
+
+    <div class = "countdown">
+      <p id="hours" style = "display: inline;"></p>
+      <p id="mins" style = "display: inline;"></p>
+      <p id="secs" style = "display: inline;"></p>
+    </div>
+
     <h2 id="end"></h2>
   </div>
 
