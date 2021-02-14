@@ -12,10 +12,13 @@ let motivational = ["You're fishing good.", "You're ameozing!", "You're reeling 
 "You're doing ameowzing!", "I'm proud of you, meow.", "Even though I'm stuck in here, I still believe in you.", "We're in this boat together.",
 "We'll get to the end of this ocean!", "The Cs are harsh today, arr!"];
 
-let fish_images = [ "/images/fish/fish_00", "/images/fish/fish_01", "/images/fish/fish_02", "/images/fish/fish_03",
-"/images/fish/fish_04", "/images/fish/fish_05", "/images/fish/fish_06", "/images/fish/fish_07",
-"/images/fish/fish_08", "/images/fish/fish_10", "/images/fish/fish_11"
+let fish_images = [ "/images/fish/fish_00.png", "/images/fish/fish_01.png", "/images/fish/fish_02.png", "/images/fish/fish_03.png",
+"/images/fish/fish_04.png", "/images/fish/fish_05.png", "/images/fish/fish_06.png", "/images/fish/fish_07.png",
+"/images/fish/fish_08.png", "/images/fish/fish_09.png", "/images/fish/fish_10.png", "/images/fish/fish_11.png"
 ];
+
+//matches by index
+let fish_names = ["standard", "classy", "Swedish", "angler", "baked", "rainbow", "school of", "blob", "boot", "eel", "sushi", "flounder", "unknown"];
 
 function changeAnimation() {
     changeCat.src = "/images/catReeling.gif";
@@ -36,7 +39,32 @@ function changeAnimation() {
 }
 
 function Fished() {
-    location.href("fishing.html");
+    //clearInterval(createClock);
+    let timer_elems = document.getElementById("timer_all");
+    timer_elems.parentNode.removeChild(timer_elems);
+
+    const fish_award = document.getElementById("fish_reward");
+    fish_award.src = "/images/catReeling.gif";
+    const fish_text = document.getElementById("fish_text");
+    fish_text.textContent = "A catch! What will your fish be???"
+    setTimeout(() => {
+        fish_award.src = "/images/FishReveal.gif";
+        fish_text.textContent = "What could it be?";
+        setTimeout(() => {
+            let fish_index = Math.floor( Math.random() * fish_images.length);
+            fish_award.src = fish_images[ fish_index ];
+            
+            fish_text.textContent = "Congratulations! You got a " + fish_names[ fish_index ] + " fish.";
+                   setTimeout(() => {
+                        //fish_award.src = "/images/catTotSmall.gif";
+                        fish_text.textContent = "Keep studying for more fishing!";
+                        setTimeout(() => {
+                            location.href = "fishing.html";
+                        }, 2000);
+                    }, 3000);
+             }, 2000);
+         }, 2000);
+    //location.href("fishing.html");
 }
 
 if (options != null) {
