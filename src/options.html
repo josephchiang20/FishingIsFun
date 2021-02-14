@@ -4,6 +4,11 @@
 <head>
   <title>FishingIsFun</title>
   <link rel="stylesheet" href="options.css">
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+<!-- Link to bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
   <script type="text/javascript">
     var jsalarm = {
       padfield: function (f) {
@@ -67,69 +72,71 @@
 </head>
 <body>
   <h1>Settings</h1>
-  <div class="section">
-      <h2>Block Sites</h2>
-      <textarea id="textarea" rows="10" cols="30" spellcheck="false"></textarea>
-      <br>
-      <button id="save">Save</button>
-      <strong>Enabled?</strong><input id="checkbox" type="checkbox">
-  </div>
-  <div class="section">
-    <h2>Set a Reminder</h2>
-    <!-- CURRENT TIME -->
-    <div id="ctime">
-      <h1 class="header">Current Time</h1>
-      <div class="square">
-        <div class="digits" id="chr">00</div>
-        <div class="text">HR</div>
-      </div>
-      <div class="square">
-        <div class="digits" id="cmin">00</div>
-        <div class="text">MIN</div>
-      </div>
-      <div class="square">
-        <div class="digits" id="csec">00</div>
-        <div class="text">SEC</div>
-      </div>
+  <div class="row">
+    <div class="section">
+        <h2>Block Sites</h2>
+        <textarea id="textarea" rows="10" cols="30" spellcheck="false"></textarea>
+        <br>
+        <button id="save">Save</button>
+        <strong>Enabled?</strong> <input id="checkbox" type="checkbox">
     </div>
-    
-    <!-- SET ALARM -->
-    <div id="tpick">
-      <h1 class="header">
-        Set Alarm
-      </h1>
-      <div id="tpick-h"></div>
-      <div id="tpick-m"></div>
-      <div id="tpick-s"></div>
-      <div>
-        <button type="button" value="Set" id="tset">Set</button>
-        <button type="button" value="Reset" id="treset" disabled>Reset</button>
+    <div class="section">
+      <h2>Set a Reminder</h2>
+      <!-- CURRENT TIME -->
+      <div id="ctime">
+        <h1 class="header">Current Time</h1>
+        <div class="square">
+          <div class="digits" id="chr">00</div>
+          <div class="text">HR</div>
+        </div>
+        <div class="square">
+          <div class="digits" id="cmin">00</div>
+          <div class="text">MIN</div>
+        </div>
+        <div class="square">
+          <div class="digits" id="csec">00</div>
+          <div class="text">SEC</div>
+        </div>
       </div>
+      
+      <!-- SET ALARM -->
+      <div id="tpick">
+        <h1 class="header">
+          Set Alarm
+        </h1>
+        <div id="tpick-h"></div>
+        <div id="tpick-m"></div>
+        <div id="tpick-s"></div>
+        <div>
+          <button type="button" value="Set" id="tset">Set</button>
+          <button type="button" value="Reset" id="treset" disabled>Reset</button>
+        </div>
+      </div>
+      
+      <!-- (C) ALARM SOUND -->
+      <audio id="alarm-sound" loop>
+        <source src="wake-up-sound.mp3" type="audio/mp3">
+      </audio>
     </div>
-    
-    <!-- (C) ALARM SOUND -->
-    <audio id="alarm-sound" loop>
-      <source src="wake-up-sound.mp3" type="audio/mp3">
-    </audio>
-  </div>
-  <div class="section">
-    <div id="myDIV" class="header">
-      <h2>My To Do List</h2>
-      <input type="text" id="myInput" placeholder="Title...">
-      <span id="newElement" class="addBtn">Add</span>
+    <div class="section">
+      <div id="myDIV" class="header">
+        <h2>My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <span id="newElement" class="addBtn">Add</span>
+      </div>
+      <ul id="myUL">
+        <li>Example task</li>
+      </ul>
     </div>
-    <ul id="myUL">
-      <li>Example task</li>
-    </ul>
-  </div>
 
-  <div>
-    <h2>Set a Reminder</h2>
-    <form>
-      <label for="fname">In x minutes:</label><br>
-      <input type="text" id="mins" name="mins" value="ex. 45"><br>
-      <input type="submit" value="Submit">
-    </form>
+    <div>
+      <h2>Set a Reminder</h2>
+      <form>
+        <label for="fname">In x minutes:</label><br>
+        <input type="text" id="mins" name="mins" value="ex. 45"><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </div>
 
   <script src="options.js"></script>
