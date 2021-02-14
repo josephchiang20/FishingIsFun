@@ -143,15 +143,19 @@ function run(ms) {
             let hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             let minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
             let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-            document.getElementById("hours").innerHTML = hours + "h "
-            document.getElementById("mins").innerHTML = minutes + "m "
-            document.getElementById("secs").innerHTML = seconds + "s"
+
+            if(!isNaN(hours) && !isNaN(minutes) && !isNaN(seconds)){
+                console.log(hours);
+                document.getElementById("hours").innerHTML = hours + "h ";
+                document.getElementById("mins").innerHTML = minutes + "m ";
+                document.getElementById("secs").innerHTML = seconds + "s";
+            }
 
             if (timeleft < 0) {
                 clearInterval(createClock);
-                document.getElementById("hours").innerHTML = ""
-                document.getElementById("mins").innerHTML = ""
-                document.getElementById("secs").innerHTML = ""
+                document.getElementById("hours").innerHTML = "";
+                document.getElementById("mins").innerHTML = "";
+                document.getElementById("secs").innerHTML = "";
                 document.getElementById("end").innerHTML = "TIME UP!!";
                 Fished();
             }
