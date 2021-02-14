@@ -11,6 +11,38 @@ let motivational = ["You're fishing good.", "You're ameozing!", "You're reeling 
 "You're doing ameowzing!", "I'm proud of you, meow.", "Even though I'm stuck in here, I still believe in you.", "We're in this boat together.",
 "We'll get to the end of this ocean!", "The Cs are harsh today, arr!"];
 
+let fish_images = [ "/images/fish/fish_00", "/images/fish/fish_01", "/images/fish/fish_02", "/images/fish/fish_03",
+"/images/fish/fish_04", "/images/fish/fish_05", "/images/fish/fish_06", "/images/fish/fish_07",
+"/images/fish/fish_08", "/images/fish/fish_10", "/images/fish/fish_11"
+];
+
+function checkIfFished() {
+    var setHr = document.getElementById("tpick-h");
+    var setMin = document.getElementById("tpick-m");
+    var setSec = document.getElementById("tpick-s");
+
+    if(setHr == ac.padzero(now.getHours()) &&
+    setMin == ac.padzero(now.getMinutes()) &&
+    setSec == ac.padzero(now.getSeconds()) ) {
+        location.href = "fishing.html";
+        cats.src = "/images/catReeling.gif";
+        const fish_reward = document.getElementById("fish_reward");
+        fish_reward.textContent = "A catch! What will your fish be???"
+        setTimeout(function(){
+            cats.src = "/images/FishReveal.gif";
+            fish_reward.textContent = "What could it be?";
+            setTimeout(function(){
+                cats.src = fish_images[Math.floor(Math.random() *fish_images.length)]
+                fish_reward.textContent = "Congratulations! You got a ";
+                setTimeout(function(){
+                    cats.src = "/images/catTotSmall.gif";
+                    fish_reward.textContent = "Keep studying for more fishing!";
+                }, 2000)
+            }, 1000)
+        }, 2000);
+    }
+}
+
 if (options != null) {
     options.addEventListener("click", () => {
         window.open("options.html", "_blank");
