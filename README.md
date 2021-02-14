@@ -9,7 +9,7 @@ The more you study well, the more you will fish nice rewards! (THINK: awfully fi
 Fishing virtual study buddy assists you while you’re on the computer but also reminds you take screen breaks which has been a struggle in the past year.
 Feeling lonely? All nighter doing an essay? Don't worry, this critter living in Chrome is always here for you.
 
-## How is this different from other study apps?
+## How is this different from other study and productivity work apps?
 Unlike other apps where they use gimmicky techniques that reset every study session and often have little to do other than
 keeping a browser open and enforcing screen limits, "Fishing is Fun" encourages self-discipline through a cute study buddy. 
 It turns studying into a fun game without any distracting separate windows. Think: Clippy but 100x better.
