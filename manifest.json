@@ -36,25 +36,8 @@
     "default_popup": "src/popup.html"
   },
 
-//  "content_scripts": [{
-//    "css": ["pet/fish.css"],
-//    "js": ["pet/fish.js"],
-//    "html" : ["pet/fish.html"],
-//    "matches": ["https://*/*"]
-//  }],
-
   "web_accessible_resources": [
     "images/*.png"
   ]
-  // "content_scripts": [
-  //   {
-  //     "matches": [
-  //       "*://*/*"
-  //     ],
-  //     "js": [
-  //       "/src/content.js"
-  //     ],
-  //     "run_at": "document_end"
-  //   }
-  // ]
+
 }
