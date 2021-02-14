@@ -25,15 +25,35 @@
     min-width: 300px;
     min-height: 200px;
   }
+
+  .motivating {
+    background-image: URL('/images/SpeechBubb.png');
+    background-repeat: no-repeat;
+    min-width: 300px;
+    min-height: 100px;
+
+  }
+
+  .motivateText {
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+  }
 </style>
 <body>
   <h1> Fisher believes in you! </h1>
   <p> You can do it!</p>
 
+<div class = "motivating">
+  <div id = "motivate" class = "motivateText">
+  Click on meow!
+  </div>
+</div>
+
   <a id="cats">
     <img src='/images/catTotSmall.gif' />
   </a>
-
   <script src="popup.js"></script>
 </body>
 </html>
