@@ -71,24 +71,33 @@
   </script>
 </head>
 <body>
-  <h1>Settings</h1>
-  <div class="section">
-      <h2>Block Sites</h2>
-      <textarea id="textarea" rows="10" cols="30" spellcheck="false"></textarea>
-      <br>
-      <button id="save">Save</button>
-      <strong>Enabled?</strong><input id="checkbox" type="checkbox">
-  </div>
-  <div class="section">
-    <div id="myDIV" class="header">
-      <h2>My To Do List</h2>
-      <input type="text" id="myInput" placeholder="Title...">
-      <span id="newElement" class="addBtn">Add</span>
-    </div>
-    <ul id="myUL">
-      <li>Example task</li>
-    </ul>
-  </div>
-</body>
 
+  <h1>Settings</h1>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="section">
+          <h2>Block Sites</h2>
+          <textarea id="textarea" rows="10" cols="30" spellcheck="false"></textarea>
+          <br>
+          <button id="save">Save</button>
+          <strong>Enabled?</strong><input id="checkbox" type="checkbox">
+      </div>
+    </div>
+    
+    <div class="col-6">
+    <div class="section">
+      <div id="myDIV" class="header">
+        <h2>My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <span id="newElement" class="addBtn">Add</span>
+      </div>
+      <ul id="myUL">
+        <li>Example task</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+</body>
 </html>
