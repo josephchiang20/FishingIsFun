@@ -7,9 +7,10 @@ body {
 }
 
 h1 {
-  margin-top: auto;
+  margin-top: 50px;
   text-align: center;
-  font-size: large;
+  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-size: 50px; 
 }
 
 /* Include the padding and border in an element's total width and height */
