@@ -43,6 +43,9 @@ function Fished() {
     let timer_elems = document.getElementById("timer_all");
     timer_elems.parentNode.removeChild(timer_elems);
 
+    const title_text = document.getElementById("title");
+    title_text.textContent = "Go Fish!";
+
     const fish_award = document.getElementById("fish_reward");
     fish_award.src = "/images/catReeling.gif";
     const fish_text = document.getElementById("fish_text");
