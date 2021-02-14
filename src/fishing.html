@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><head>
     <title>Study Hall</title>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 </head>
 
 <style>
@@ -20,6 +20,8 @@
   h1 {
     text-align: center;
     background-color: #b8e5fc;
+    min-width: 260px;
+    min-height: 50px;
   }
   img {
     min-width: 300px;
@@ -44,9 +46,23 @@
     color: #8f4d18;
     font-weight: bold;
   }
+
+  .clickable {
+    background-color: #f44336;
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+  }
 </style>
 <body>
-  <h1> Fisher believes in you! </h1>
+  <div align = "center">
+    <div style="display: inline-block;">
+      <button id = "back" class = "clickable"> <i class="fas fa-angle-double-left"></i> </button>
+    </div>
+  <h1 style = "display: inline-block;"> Go Fish! </h1>
+
+</div>
+  
 
 <div class = "motivating">
   <div id = "motivate" class = "motivateText">
