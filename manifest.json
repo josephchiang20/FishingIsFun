@@ -13,7 +13,7 @@
   "name": "FishingIsFun",
   "version": "0.0.1",
   "options_page": "src/options.html",
-  "description": "Productivity Chrome extension that blocks sites, set tasks, and makes fishing fun!",
+  "description": "A productivity Chrome extension that blocks sites, creates tasks, sets timers, and makes fishing fun!",
   "icons": {
     "16": "icons/anchor-16.png",
     "32": "icons/anchor-32.png",
