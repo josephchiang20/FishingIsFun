@@ -13,61 +13,53 @@ making it look stylish can be a cool extension.
 
 <!DOCTYPE html>
 <html>
-
-<style>
-body {
-  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-  position: relative;
-  vertical-align:middle;
-  background-image: url(/images/CatBoatSmall.gif);
-  background-size: 100% 100%;
-  min-width: 310px;
-  min-height: 430px;
-  overflow: hidden;
-  /*margin : 0;*/
-}
-h1 {
-  text-align: center;
-  margin-top : 15px;
-  margin-bottom : 30px;
-  /*background-color: #b8e5fc;*/
-  /*min-height: 50px;
-  min-width: 210px;*/
-}
-.clickable {
-  background-color: #f44336;
-  padding: 5px 10px;
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  text-align: center;
-}
-.banner {
-  background-image: url('/images/Banner.png');
-  background-repeat: no-repeat;
-  /*background-color: #b8e5fc;*/
-  /*min-height: 50px;
-  min-width: 310px;*/
-  /*max-height: 50px;
-  position : center;*/
-}
-p {
-  font-size: 20px;
-  padding-left: 20px;
-  color: #15216e;
-}
-</style >
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+      font-size: 100%;
+      position: relative;
+      vertical-align: middle;
+      background-image: url(/images/CatBoatSmall.gif);
+      background-size: 100% 100%;
+      min-width: 310px;
+      min-height: 430px;
+      overflow: hidden;
+    }
+  
+    h1 {
+      text-align: center;
+      background-color: #b8e5fc;
+      min-height: 50px;
+      min-width: 210px;
+    }
+  
+    .clickable {
+      background-color: #f44336;
+      padding: 5px 10px;
+      color: white;
+      font-size: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+  
+    p {
+      font-size: 20px;
+      padding-left: 20px;
+      color: #15216e;
+    }
+  </style>
+</head>
 <body>
   <div class = "banner">
     <h1 style="display: inline-block;">
       Fishing is Fun
     </h1>
     <div style="display: inline-block;">
-      <button tabindex="10" id="options" class = "clickable"> <i class="fas fa-cog"></i> </button>
-      <button tabindex="10" id="fishing" class = "clickable"> <i class="fas fa-fish"></i> </button>
-    </div>
+    <button tabindex="10" id="options" class = "clickable"> <i class="fas fa-cog"></i> </button>
+    <button tabindex="10" id="fishing" class = "clickable"> <i class="fas fa-fish"></i> </button>
+    <button tabindex="10" id="timer" class= "clickable">Timer</button>
   </div>
     <p>
       Block sites and focus on your tasks!
